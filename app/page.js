@@ -11,6 +11,7 @@ import WomenSpeaking from "./components/WomenSpeaking";
 import { useEffect, useRef, useState } from "react";
 import RealWorkexpe from "./components/RealWorkexpe";
 import TrueIndustry from "./components/TrueIndustry";
+import Introducing from "./components/Introducing";
 
 export default function Home() {
 const parent = useRef(null);  
@@ -176,6 +177,10 @@ experience you need to stand out in today’s competitive job market.</p>
 <div className="relative z-[3] bg-white py-20"> 
               <p className="text-[6rem] leading-[1.5] text-[var(--greenparrot2)] text-center [-webkit-text-stroke:1px_black]  italic  font-monaCondensedbold">But it doesn’t have to be this way. </p>
         </div>
+
+
+<Introducing/>
+
 
 <TrueIndustry/>
 

@@ -11,6 +11,7 @@ module.exports = {
       fontFamily: {
         monaRegular: ['var(--font-monaregular)'],
         monaMedium: ['var(--font-monamedium)'],
+        monaBold: ['var(--font-monabold)'],
         monaExpanded: ['var(--font-monaExpanded)'],
         monaExpandedbold: ['var(--font-monaExpandedbold)'],
         monaExpandedblack: ['var(--font-monaExpandedblack)'],
