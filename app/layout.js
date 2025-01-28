@@ -43,6 +43,12 @@ const monaexpandedbold = localFont({
   variable: "--font-monaExpandedbold",
   // weight: "100 900",
 });
+const monaexpandedextrasbold = localFont({
+  src: "./fonts/MonaSansExpanded-ExtraBold.ttf",
+  variable: "--font-monaExpandedextrabold",
+  // weight: "100 900",
+});
+
 const monaexpandedblack = localFont({
   src: "./fonts/MonaSansExpanded-Black.woff2",
   variable: "--font-monaExpandedblack",
@@ -83,12 +89,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="">
       <body
-        className={`${monasans.variable} ${monasansmed.variable} ${monasansbold.variable} ${monaexpanded.variable} ${monacondensedreg.variable} ${monacondensedmed.variable} ${monacondensedmeditalic.variable} ${monacondensedsemibold.variable} ${monacondensedbold.variable}  ${monaexpandedbold.variable} ${monaexpandedblack.variable} font-monaExpanded antialiased font-[130] leading-[1.2] !text-[var(--black)] bg-[var(--black)]`}
+        className={`${monasans.variable} ${monasansmed.variable} ${monasansbold.variable} ${monaexpanded.variable} ${monacondensedreg.variable} ${monacondensedmed.variable} ${monacondensedmeditalic.variable} ${monacondensedsemibold.variable} ${monacondensedbold.variable}  ${monaexpandedbold.variable} ${monaexpandedextrasbold.variable} ${monaexpandedblack.variable} font-monaExpanded antialiased font-[130] leading-[1.2] !text-[var(--black)] bg-[var(--black)]`}
       >
          <main  className='bg-[#0e0e0e] min-h-[100vh-133px] '>
          <section>
          <div>
-         <Header/>
+         {/* <Header/> */}
          <Navbar/>
         {children}
       </div>

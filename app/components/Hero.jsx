@@ -68,10 +68,10 @@ const [contaienrstate, setcontaienrstate] = useState('');
     })
 
     return (
-        <div ref={containref} className='h-[100vh] bg-[var(--greenparrot2)]'>
+        <div ref={containref} className='h-[100vh] relative bg-[var(--greenparrot2)]'>
             <section style={{position: itstimetext>.999&&contaienrstate<1?'fixed':'',left: itstimetext>.999&&contaienrstate<1?'0':'',top: itstimetext>.999&&contaienrstate<1?'0px':'',transform:contaienrstate===1&&`translate(0px,902px)`}} className='w-full'>
             <section className='h-[100vh] m-0 '>
-                <div className='w-full absolute bottom-full'>
+                <div className='w-full absolute bottom-full z-[7]'>
                     <div className='flex justify-start w-full max-w-[1260px] px-5 my-0 mx-auto'>
                         <button className='rounded-tl-[30px] rounded-tr-[30px] bg-[var(--tomato)] relative left-auto bottom-auto min-w-[260px] pt-[18px] px-[30px] pb-[8px] cursor-pointer'>
                             <span>Scroll down <span>↓</span></span>

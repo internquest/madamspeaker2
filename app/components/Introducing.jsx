@@ -35,6 +35,35 @@ const Introducing = () => {
                 </div>
             </div>
         </div>
+
+        <div className='flex gap-12 mt-10'>
+            <div className='basis-[40%] bg-white pt-20  min-h-[545px] border border-black '>
+                <div className='border-b w-full border-dashed  border-b-black'>
+
+            <div className='flex text-[2.25rem]  max-w-[245px] ml-16 pb-5 font-monaCondensedbold text-[var(--thick-peach)] flex-col items-center '>
+<div className='text-[2.75rem] leading-[1]'><span className='text-[2rem]'>what</span> if</div>
+<div className='mt-3 text-[4.75rem]  whitespace-nowrap tracking-[-.001em] leading-[1.8]'><span className='text-[3.5rem]'>you</span>{' '}could</div>
+</div>
+</div>
+<div className=''>
+<div className='flex text-[2.25rem]  max-w-[245px] ml-16 mt-10 pb-5 font-monaCondensedbold text-[var(--primary-col)] flex-col items-center '>
+<div className='text-[2.75rem]  opacity-90 leading-[1]'><span className='text-[2rem]'>learn</span> by</div>
+<div className='mt-3 text-[4.75rem] font-monaExpandedblack whitespace-nowrap tracking-[-.001em] leading-[1.2]'>doing</div>
+
+</div>
+                </div>
+            </div>
+            <div className='basis-[60%] border  border-black pt-12 flex flex-col  pl-10 '>
+                <div className='text-[4rem] font-monaExpandedextrasbold  [-webkit-text-stroke:1px_black] tracking-[-.001em] text-[var(--fourth-col)] leading-[1.5] px-4 bg-[var(--green4)] whitespace-nowrap w-min'>working with</div>
+                <div className='text-[4rem] font-monaExpandedextrasbold pl-20 mt-10  [-webkit-text-stroke:1px_black] tracking-[-.001em] text-white leading-[1.5] px-4  bg-[#816CFF] whitespace-nowrap w-min '>real teams</div>
+                <div className='border border-[var(--third-col)] w-min bg-[var(--fourth-col)] mt-10 pr-10 pl-5 text-[var(--greenparrot3)] text-[4rem] tracking-[.001em] leading-[1.5] [-webkit-text-stroke:1px_black] font-monaCondensedbold font-extrabold whitespace-nowrap px-4'>on real projects</div>
+                <div className='border border-black self-end font-monaMedium leading-[2] -translate-x-[20%] px-5 pr-10 py-3 text-[1.25rem] text-black bg-white'>
+                    that actually matter...
+                </div>
+            </div>
+            </div>
+        
+
     </div>
   )
 }

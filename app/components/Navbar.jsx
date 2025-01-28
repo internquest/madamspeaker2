@@ -1,9 +1,15 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+    const [navstate, setnavstate] = useState(false);
+    const handlenav=()=>{
+        setnavstate(!navstate)
+    }
   return (
-    <div className="box-border fixed m-0 top-0 left-2/4 bg-[rgb(255,_255,_255)] px-[40px] py-[20px] rounded-tl-[0] rounded-br-[var(--border-radius-large)] rounded-tr-[0] z-[4] rounded-bl-[var(--border-radius-large)] translate-x-[-50%] translate-y-[-10px]">
-            <nav className="box-border relative m-0">
+    <>
+    <div className="box-border fixed m-0 top-0 hidden lg:block left-2/4 bg-[rgb(255,_255,_255)] px-[40px] py-[20px] rounded-tl-[0] rounded-br-[var(--border-radius-large)] rounded-tr-[0] z-[9] rounded-bl-[var(--border-radius-large)] translate-x-[-50%] translate-y-[-10px]">
+            <nav className="box-border  relative m-0">
                 <ul className="box-border relative m-0 p-0 flex items-center gap-[30px]">
                     <li className="font-[var(--font-serif)] box-border relative m-0 [list-style:none]">
                         <a href="/our-mission" className="box-border relative m-0 no-underline [color:inherit]">
@@ -22,16 +28,41 @@ const Navbar = () => {
                     </li>
                 </ul>
             </nav>
-            <svg width="430" height="431" viewBox="0 0 430 431" fill="none"
-                xmlns="http://www.w3.org/2000/svg" className="box-border relative m-0 hidden max-w-full">
-                <circle cx="134.697" cy="296.883" r="133.684" transform="rotate(-14.981 134.697 296.883)" fill="#5F00F6" className="box-border relative m-0"></circle>
-                <path d="M68.009 273.167C65.1725 279.15 64.9308 286.573 67.2965 295.414L69.3397 303.049L79.9977 300.197L84.9724 318.788L68.269 323.257L61.4289 297.696C58.5254 286.846 58.8659 277.692 62.4408 270.201C66.0205 262.728 73.1346 257.547 83.8101 254.691L85.4091 260.666C76.6381 263.013 70.8454 267.185 68.0043 273.15L68.009 273.167ZM104.963 263.279C102.126 269.262 101.884 276.685 104.25 285.526L106.293 293.161L116.951 290.309L121.926 308.899L105.223 313.369L98.3824 287.807C95.479 276.957 95.8194 267.804 99.3944 260.313C102.974 252.839 110.088 247.659 120.764 244.802L122.363 250.778C113.592 253.125 107.799 257.296 104.958 263.261L104.963 263.279Z" fill="black" className="box-border relative m-0"></path>
-                <path d="M201.391 320.599C204.227 314.617 204.469 307.194 202.103 298.353L200.06 290.717L189.402 293.569L184.428 274.979L201.131 270.509L207.971 296.071C210.874 306.921 210.534 316.074 206.959 323.566C203.379 331.039 196.265 336.219 185.59 339.076L183.991 333.101C192.762 330.754 198.554 326.582 201.396 320.617L201.391 320.599ZM164.437 330.488C167.274 324.505 167.516 317.082 165.15 308.241L163.107 300.606L152.449 303.458L147.474 284.868L164.177 280.398L171.018 305.96C173.921 316.81 173.581 325.963 170.006 333.454C166.426 340.928 159.312 346.108 148.636 348.965L147.037 342.989C155.808 340.642 161.601 336.471 164.442 330.505L164.437 330.488Z" fill="black" className="box-border relative m-0"></path>
-                <circle cx="295.627" cy="133.81" r="133.684" transform="rotate(11.0402 295.627 133.81)" fill="#9D7A3C" className="box-border relative m-0"></circle>
-                <path d="M246.103 83.2421C240.929 87.3741 237.456 93.9385 235.703 102.921L234.19 110.679L245.018 112.792L241.333 131.68L224.362 128.369L229.429 102.397C231.58 91.3732 235.902 83.2972 242.401 78.1339C248.896 72.9883 257.562 71.4541 268.408 73.5704L267.224 79.6416C258.312 77.9029 251.277 79.1101 246.107 83.2243L246.103 83.2421ZM283.649 90.5676C278.475 94.6996 275.002 101.264 273.249 110.247L271.735 118.004L282.564 120.117L278.879 139.005L261.908 135.694L266.975 109.723C269.126 98.6987 273.447 90.6227 279.946 85.4594C286.442 80.3138 295.107 78.7797 305.954 80.8959L304.769 86.9672C295.858 85.2284 288.822 86.4357 283.652 90.5499L283.649 90.5676Z" fill="black" className="box-border relative m-0"></path>
-                <path d="M345.156 184.382C350.33 180.25 353.804 173.685 355.556 164.703L357.07 156.945L346.241 154.832L349.926 135.944L366.897 139.255L361.83 165.227C359.679 176.251 355.358 184.327 348.859 189.49C342.363 194.635 333.698 196.17 322.851 194.053L324.036 187.982C332.947 189.721 339.983 188.514 345.153 184.399L345.156 184.382ZM307.61 177.056C312.784 172.924 316.258 166.36 318.01 157.377L319.524 149.619L308.695 147.507L312.38 128.618L329.351 131.93L324.284 157.901C322.133 168.925 317.812 177.001 311.313 182.164C304.817 187.31 296.152 188.844 285.305 186.728L286.49 180.657C295.401 182.395 302.437 181.188 307.607 177.074L307.61 177.056Z" fill="black" className="box-border relative m-0"></path>
-            </svg>
+           
         </div>
+
+
+        <div className='lg:hidden fixed w-full px-[30px] py-[20px] z-[9] top-0'>
+            <div className='flex justify-between w-full z-[5] relative items-center'>
+            <a aria-label="Home" class="w-[80px]" href="/"><span aria-label="Home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 59.5"><path d="m100,2.72c-2.21,0-3.91.59-5.12,1.78-1.2,1.13-1.81,2.69-1.81,4.68v2.89h4.32v7.31h-7.53v-9.52c0-3,.9-5.38,2.71-7.14,1.81-1.81,4.28-2.72,7.43-2.72v2.72Zm-12.64,0c-2.21,0-3.91.59-5.12,1.78-1.2,1.13-1.81,2.69-1.81,4.68v2.89h4.32v7.31h-7.53v-9.52c0-3,.9-5.38,2.71-7.14,1.81-1.81,4.28-2.72,7.43-2.72v2.72Z"></path><path d="m0,0h10.54l23.48,52.78h.1L57.6,0h10.54v59.5h-7.13V14.62c0-.96.03-1.93.1-2.89v-2.8h-.2l-22.68,50.57h-8.33L7.23,8.92h-.2c.07,2.32.1,4.65.1,6.97v43.6H0V0Z"></path></svg></span>
+            </a>
+
+            <div onClick={handlenav} className='w-[50px] h-[50px] rounded-[50%] relative bg-[var(--peach)]'>
+            <svg style={{opacity:navstate?'0':'1'}} className='absolute w-[30px] h-[30px] top-[10px] duration-300 left-[10px]' width="59" height="49" viewBox="0 0 59 49" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.99996 7.38318C4.84471 5.42766 6.68529 5.47591 8.35175 5.10955C17.1088 3.18439 25.5385 4.19482 33.9972 4.70357C40.6031 5.10089 47.355 4.7802 53.6957 7.23685C54.56 7.57171 55.3594 8.27213 56.1589 9.02849" stroke="black" stroke-width="4.96263" stroke-linecap="round"></path><path d="M2.99979 23.5199C4.83734 21.5576 6.67808 21.5991 8.34318 21.2266C17.0931 19.2692 25.5265 20.2486 33.987 20.7263C40.5943 21.0993 47.3449 20.7537 53.6946 23.187C54.5602 23.5187 55.3621 24.2162 56.1644 24.9696" stroke="black" stroke-width="4.96263" stroke-linecap="round"></path><path d="M2.99976 39.4011C4.94355 37.544 6.77914 37.6877 8.46238 37.4084C17.3075 35.9404 25.6735 37.3872 34.0943 38.3344C40.6707 39.0741 47.4301 39.1044 53.6347 41.8869C54.4805 42.2662 55.2424 43.0072 56.0016 43.804" stroke="black" stroke-width="4.96263" stroke-linecap="round"></path></svg>
+
+
+
+            <svg style={{opacity:navstate?'1':'0'}} className='absolute w-[30px] h-[30px] top-[10px] duration-300 left-[10px]' width="52" height="50" viewBox="0 0 52 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.92142 40.2015C4.32691 37.5439 5.86838 36.537 7.03086 35.288C13.1396 28.7248 20.6483 24.7625 27.8956 20.371C33.5555 16.9415 38.9271 12.8383 45.5399 11.2535C46.4412 11.0375 47.4971 11.1591 48.5849 11.3266" stroke="black" stroke-width="4.96263" stroke-linecap="round"></path><path d="M7.26722 3.72198C9.94081 4.00318 11.0185 5.49605 12.3203 6.59907C19.161 12.3953 23.4689 19.7112 28.1933 26.746C31.8829 32.2399 36.2319 37.4145 38.1232 43.9462C38.3809 44.8365 38.3087 45.8969 38.192 46.9913" stroke="black" stroke-width="4.96263" stroke-linecap="round"></path></svg>
+            </div>
+            </div>
+
+            <div className='fixed top-0 left-0 w-screen h-screen bg-[var(--peach)] z-[4] px-[10px] py-[150px] duration-300 ' style={{transform:navstate?'translateX(0)':'translateX(-100%)',opacity:navstate?'1':'0'}} id='nav'>
+                <nav>
+                    <ul className='flex flex-col gap-10  items-center'>
+                        <li className='text-[30px]'>
+                        <a class="" href="/our-mission"><span>Our Mission</span></a>
+                        </li>
+                        <li className='text-[30px]'>
+                        <a class="" href="/our-mission"><span>Speech Archieve</span></a>
+                        </li>
+                        <li className='text-[30px]'>
+                        <a class="" href="/our-mission"><span>Contribute</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </>
   )
 }
 
